@@ -65,7 +65,7 @@ def dilution_recc(chop_ppm,p_conc,chop_ng='',sample_id=1,target=[1,3,12,40,100],
            break;
         
        apc = chop_ng/df
-       sample_v = target_v*apc/chop_ng
+       sample_v = round(target_v*apc/chop_ng,)
        buffer_v = target_v-sample_v
        dilution_table.loc[n,['sample_id','chop_ppm','p_conc','chop_ng','target','dil_factor','approx_chop','sample_v','buffer_v']]=sample_id,chop_ppm,p_conc,chop_ng,i,df,apc,sample_v,buffer_v
        n+=1
