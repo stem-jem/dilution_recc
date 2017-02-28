@@ -7,15 +7,14 @@ Created on Tue Jan  3 13:49:29 2017
 """
 def dilution_recc(chop_ppm,p_conc,chop_ng='',sample_id=1,target=[1,3,12,40,100],target_v=50,vol_min=5,vol_max=200,drop_null=True):
     """
-    This function builds a list of reccomended dilution levels for a given sample.
-    Predominatley used for the CHOP assay, it can also be used for any general
+    This function builds a list of reccomended dilution levels for a given sample. It can also be used for any general
     application to take the guesswork out of dilutions.
     
     Example: You want to dilute a sample at 345ppm to a stock of 1,2,12,40, 
     100 ppm. What is the best way to do it without extensive pen/paper work?
     
     Dilution levels are incremented in whole number fractions. Ie a 1:3 has the
-    next higher dilution level of 1:4. There are no fractional dilution factors.
+    next higher dilution level of 1:4. There are no fractional dilution factors currently implemented.
     
     Parameters:
     -----
